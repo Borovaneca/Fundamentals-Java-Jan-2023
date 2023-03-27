@@ -1,8 +1,6 @@
-package Fundamentals.Exams.FinalExam;
-
 import java.util.*;
 
-public class PlantDiscovery {
+public class Plant_Discovery_03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -50,19 +48,18 @@ public class PlantDiscovery {
                 default:
                     System.out.println("error");
             }
-
-
-            System.out.println("Plants for the exhibition:");
-
-
-            for (Map.Entry<String, Integer> entry : plants.entrySet()) {
-                String plant = entry.getKey();
-                int rarity = entry.getValue();
-                double averageRating = ratings.get(plant).stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
-                System.out.println(String.format("- %s; Rarity: %d; Rating: %.2f", plant, rarity, averageRating));
-            }
-
-
         }
+
+        System.out.println("Plants for the exhibition:");
+
+
+for (Map.Entry<String, Integer> entry : plants.entrySet()) {
+    String plant = entry.getKey();
+    int rarity = entry.getValue();
+    double averageRating = ratings.get(plant).stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+    System.out.println(String.format("- %s; Rarity: %d; Rating: %.2f", plant, rarity, averageRating));
+}
+
+
     }
 }
